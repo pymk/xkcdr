@@ -75,7 +75,7 @@ fxn_call_api <- function(x) {
 
   if (rlang::is_missing(x) | is.null(x) | is.na(x)) {
     path <- paste("info.0.json", sep = "/")
-  } else if (is.numeric(x) & as.numeric(x) %% 1 == 0) {
+  } else if (is.numeric(x) && as.numeric(x) %% 1 == 0) {
     if (x > latest_num) {
       rlang::inform(
         message = "Incorrect Comic Number",

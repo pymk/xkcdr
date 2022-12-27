@@ -1,5 +1,9 @@
 # xkcdr
 
+<!-- badges: start -->
+[![Codecov test coverage](https://codecov.io/gh/pymk/xkcdr/branch/master/graph/badge.svg)](https://app.codecov.io/gh/pymk/xkcdr?branch=master)
+<!-- badges: end -->
+
 An R package to retrieve xkcd comics.
 
 It retrieves xkcd comic as JSON from [https://xkcd.com/json.html](https://xkcd.com/json.html) and parses it into 

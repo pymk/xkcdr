@@ -1,7 +1,7 @@
 # xkcdr
 
 <!-- badges: start -->
-[![Codecov test coverage](https://codecov.io/gh/pymk/xkcdr/branch/master/graph/badge.svg)](https://app.codecov.io/gh/pymk/xkcdr?branch=master)
+[![test-coverage](https://github.com/pymk/xkcdr/actions/workflows/test-coverage.yaml/badge.svg)](https://github.com/pymk/xkcdr/actions/workflows/test-coverage.yaml)
 <!-- badges: end -->
 
 An R package to retrieve xkcd comics.

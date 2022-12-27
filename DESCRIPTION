@@ -1,0 +1,23 @@
+Package: xkcdr
+Title: Retrieve xkcd comics
+Description: This is an R package to retrieve xkcd comics.
+Version: 0.0.0.9000
+Author: person("pymk", email = "github@ok.mozmail.com", role = c("aut", "cre"))
+Maintainer: pymk <github@ok.mozmail.com>
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.2
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+Imports: 
+    dplyr,
+    gt,
+    gtExtras,
+    httr,
+    janitor,
+    jsonlite,
+    magick,
+    rlang,
+    tibble

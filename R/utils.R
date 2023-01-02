@@ -149,6 +149,7 @@ fxn_make_table <- function(x) {
   comic_date <- as.Date(paste(x$year, x$month, x$day, sep = "-"))
   col_name <- paste0("xkcd", " #", x$num)
   img_info <- magick::image_read(x$img)
+  img_width <- magick::image_info(img_info)$width
   img_height <- magick::image_info(img_info)$height
 
   x <- dplyr::mutate(x, date = comic_date)
@@ -160,8 +161,11 @@ fxn_make_table <- function(x) {
       title = x$title,
       subtitle = format(x$date, "%b %d, %Y")
     ) |>
-    gtExtras::gt_img_rows(col_name, height = img_height) |>
+    gtExtras::gt_img_rows(col_name, height = gt::px(img_height)) |>
     gt::tab_footnote(gt::md(paste0("*", x$alt, "*"))) |>
     gt::tab_source_note(source_note = paste0("https://xkcd.com/", x$num, "/")) |>
+    gt::tab_options(
+      table.width = gt::px(img_width)
+    ) |>
     gtExtras::gt_theme_espn()
 }
